@@ -22,10 +22,22 @@ namespace ConsoleApp
             {
                 string[] arr = lines[i].Split(' ');
                 int[] numberArr = Array.ConvertAll(arr, int.Parse);
-                for (int c = 0; c < matrix.Length; c++)
+                for (int r = 0; r < arr.GetLength(0); r++)
                 {
-
+                    for (int c = 0; c < arr.GetLength(1); c++)
+                    {
+                        matrix[r, c] = numberArr[c];
+                    }
                 }
+            }
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    Console.Write(matrix[i, j] + "\t");
+                }
+                Console.WriteLine();
             }
         }
     }
