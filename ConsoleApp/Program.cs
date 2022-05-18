@@ -1,58 +1,44 @@
 ﻿using System.Collections;
+using ConsoleApp;
 
-int n = 0, near = 0;
-int[] arr = new int[0];
-double avg = 0;
-ArrayList list = new ArrayList();
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-Console.WriteLine("Nhap n: ");
-n = int.Parse(Console.ReadLine());
-arr = new int[n];
-for (int i = 0; i < n; i++)
+int index = 0;
+char input = 'y';
+Cau1 cau1 = new Cau1();
+Cau2 cau2 = new Cau2();
+Cau3 cau3 = new Cau3();
+
+while (input == 'y')
 {
-    Console.WriteLine($"Nhap phan tu thu {i + 1}: ");
-    arr[i] = int.Parse(Console.ReadLine());
+    Console.WriteLine("1 - Câu 1 \n2 - Câu 2 \n3 - Câu 3 \n");
+    index = cau1.ValidateNumbericInput("Chọn câu: ", index);
+    Console.WriteLine();
+
+    switch (index)
+    {
+        case 1:
+            cau1.Run();
+            break;
+
+        case 2:
+            cau2.Run();
+            break;
+
+        case 3:
+            cau3.Run();
+            break;
+    }
+
+    ValidateInput("Làm lại? (y/n)", input = Console.ReadKey().KeyChar);
 }
 
-avg = Queryable.Average(arr.AsQueryable());
-near = 0;
-for (int i = 0; i < arr.Length; i++)
+void ValidateInput(string str, char input)
 {
-    if (KiemTraNguyenTo(arr[i]))
+    Console.WriteLine(str);
+    while (input != 'y' || input != 'n')
     {
-        list.Add(arr[i]);
+        Console.Write(str);
+        input = Console.ReadKey().KeyChar;
     }
-}
-Console.WriteLine($"Trung binh cua mang: {avg}");
-Console.WriteLine($"So nguyen to gan nhat: {TimSoGanNhat()}");
-
-bool KiemTraNguyenTo(int n)
-{
-    if (n < 2)
-    {
-        return false;
-    }
-    else
-    {
-        for (int i = 2; i < n; i++)
-        {
-            if (n % i == 0)
-            {
-                return false;
-            }
-        }
-        return true;
-    }
-}
-
-int TimSoGanNhat()
-{
-    for (int i = 0; i < list.Count; i++)
-    {
-        if (Math.Abs(avg - (int)list[i]) < Math.Abs(avg - near))
-        {
-            near = (int)list[i];
-        }
-    }
-    return near;
 }
