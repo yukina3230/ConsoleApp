@@ -4,15 +4,15 @@ using ConsoleApp;
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 int index = 0;
-char input = 'y';
+string input = "y";
 Cau1 cau1 = new Cau1();
 Cau2 cau2 = new Cau2();
 Cau3 cau3 = new Cau3();
 
-while (input == 'y')
+while (input == "y")
 {
     Console.WriteLine("1 - Câu 1 \n2 - Câu 2 \n3 - Câu 3 \n");
-    index = cau1.ValidateNumbericInput("Chọn câu: ", index);
+    ValidateIndexInput("Chọn câu: ");
     Console.WriteLine();
 
     switch (index)
@@ -30,15 +30,25 @@ while (input == 'y')
             break;
     }
 
-    ValidateInput("Làm lại? (y/n)", input = Console.ReadKey().KeyChar);
+    ValidateInput("Làm lại? (y/n)");
 }
 
-void ValidateInput(string str, char input)
+void ValidateIndexInput(string str)
 {
-    Console.WriteLine(str);
-    while (input != 'y' || input != 'n')
+    index = cau1.ValidateNumbericInput(str, index);
+    if (index != 1 && index != 2 && index != 3)
     {
-        Console.Write(str);
-        input = Console.ReadKey().KeyChar;
+        ValidateIndexInput(str);
+    }
+}
+
+void ValidateInput(string str)
+{
+    Console.Write($"\n{str} - ");
+    input = Console.ReadLine();
+    Console.WriteLine();
+    if (input != "y" && input != "n")
+    {
+        ValidateInput(str);
     }
 }

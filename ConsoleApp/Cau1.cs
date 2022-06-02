@@ -26,7 +26,7 @@ namespace ConsoleApp
             avg = Queryable.Average(arr.AsQueryable());
             NguyenTo(arr, 0);
 
-            Console.WriteLine($"Số trung bình của mảng: {avg}");
+            Console.WriteLine($"Số trung bình của mảng: {Math.Round(avg, 2)}");
             Console.WriteLine($"Số nguyên tố trong mảng: {InMang(list)}");
             Console.WriteLine($"Số nguyên tố gần trung binh nhất: {near}");
         }
