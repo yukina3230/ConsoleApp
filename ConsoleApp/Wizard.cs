@@ -6,18 +6,22 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    public class Wizard : Character, IUltimate
+    public class Wizard : IUltimate
     {
-        public override string Class = "Wizard";
-
-        public override void Attack()
+        public string Class { get; set; }
+        public Wizard(string _Class) : base()
         {
-            Console.WriteLine("Wizard is spamming spell...");
+            Class = _Class;
         }
+
+        //public override void Attack()
+        //{
+        //    Console.WriteLine("Wizard is spamming spell...");
+        //}
 
         public void UseUltimate()
         {
-            Console.WriteLine("Wizard using \"Lightning strike\"...");
+            Console.WriteLine($"{Class} uses \"Lightning strike\"...");
         }
     }
 }

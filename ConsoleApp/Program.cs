@@ -1,11 +1,16 @@
 ﻿using ConsoleApp;
 
-List<Character> characterList = new List<Character>();
+List<IUltimate> characterList = new List<IUltimate>();
 var playerControler = new Player();
 
 
-characterList.Add(new Wizard());
-characterList.Add(new Knight());
-characterList.Add(new Hobo());
+characterList.Add(new Wizard("Wizard"));
+characterList.Add(new Knight("Knight"));
 
-playerControler.DoingStuff(characterList);
+foreach (var item in characterList)
+{
+    item.UseUltimate();
+}
+
+Static.MaxLevel = 20;
+Console.WriteLine(Static.MaxLevel);

@@ -8,11 +8,14 @@ namespace ConsoleApp
 {
     public class Hobo : Character
     {
-        public override string Class = "Hobo";
+        public Hobo(string _Class) : base(_Class)
+        {
+            Class = _Class;
+        }
 
         public override void Attack()
         {
-            Console.WriteLine("Naked fuck with a stick...");
+            Console.WriteLine("Just a naked fuck with a stick...");
         }
     }
 }

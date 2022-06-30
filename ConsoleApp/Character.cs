@@ -8,11 +8,16 @@ namespace ConsoleApp
 {
     public abstract class Character
     {
-        public abstract string Class { get; set; }
+        public virtual string Class { get; set; }
+
+        public Character(string _Class)
+        {
+            Class = _Class;
+        }
 
         public void Walk()
         {
-            Console.WriteLine("Walking...");
+            Console.WriteLine($"{Class} is walking...");
         }
 
         public abstract void Attack();

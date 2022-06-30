@@ -8,6 +8,10 @@ namespace ConsoleApp
 {
     interface IUltimate
     {
-        void UseUltimate();
+        string Class { get; set; }
+        void UseUltimate()
+        {
+            Console.WriteLine($"Character is using an \"Ultimate\"");
+        }
     }
 }

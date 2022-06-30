@@ -12,7 +12,7 @@ namespace ConsoleApp
         {
             foreach (var player in players)
             {
-                Console.WriteLine($"{player.cla}); player.Walk();
+                player.Walk();
                 player.Attack();
             }
 
