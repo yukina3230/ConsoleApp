@@ -1,11 +1,11 @@
 ﻿using ConsoleApp;
 
-List<IUltimate> characterList = new List<IUltimate>();
-var playerControler = new Player();
+List<Character> characterList = new List<Character>();
 
+Character testChar = new Wizard();
 
-characterList.Add(new Wizard("Wizard"));
-characterList.Add(new Knight("Knight"));
+characterList.Add(new Wizard("Aaron", 1, "Wizard"));
+characterList.Add(new Knight("Amir", 5, "Knight"));
 
 foreach (var item in characterList)
 {

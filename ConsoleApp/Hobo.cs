@@ -8,7 +8,8 @@ namespace ConsoleApp
 {
     public class Hobo : Character
     {
-        public Hobo(string _Class) : base(_Class)
+        public string Class { get; set; }
+        public Hobo(string _Class) : base()
         {
             Class = _Class;
         }

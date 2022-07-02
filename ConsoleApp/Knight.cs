@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    public class Knight : IUltimate
+    public class Knight : Character
     {
-        public string Class { get; set; }
-        public Knight(string _Class) : base()
-        {
-            Class = _Class;
-        }
-
         //public override void Attack()
         //{
         //    Console.WriteLine("Knight is winging sword...");
@@ -22,6 +16,11 @@ namespace ConsoleApp
         public void UseUltimate()
         {
             Console.WriteLine($"{Class} uses \"Strong attack\"...");
+        }
+
+        public void Attack()
+        {
+            throw new NotImplementedException();
         }
     }
 }

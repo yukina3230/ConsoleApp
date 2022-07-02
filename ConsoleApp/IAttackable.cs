@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    interface IUseUltimate
+    interface IAttackable
     {
-        void UseUltimate(string _Class)
-        {
-            Console.WriteLine($"{_Class} is using an \"Ultimate\"");
-        }
+        public void Attack();
     }
 }

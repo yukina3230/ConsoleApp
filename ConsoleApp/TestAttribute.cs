@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    interface IUseUltimate
+    public class TestAttribute : Attribute
     {
-        void UseUltimate(string _Class)
-        {
-            Console.WriteLine($"{_Class} is using an \"Ultimate\"");
-        }
+        public string Name { get; set; }
+        public int Level { get; set; }
     }
 }

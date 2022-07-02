@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    public class Wizard : IUltimate
+    [Test(Name = "Alan", Level = 1)]
+    public class Wizard : Character
     {
-        public string Class { get; set; }
-        public Wizard(string _Class) : base()
-        {
-            Class = _Class;
-        }
-
         //public override void Attack()
         //{
         //    Console.WriteLine("Wizard is spamming spell...");
