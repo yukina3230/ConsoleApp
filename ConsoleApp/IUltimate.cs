@@ -8,9 +8,9 @@ namespace ConsoleApp
 {
     interface IUseUltimate
     {
-        void UseUltimate(string _Class)
+        void UseUltimate()
         {
-            Console.WriteLine($"{_Class} is using an \"Ultimate\"");
+            Console.WriteLine($"Character is using an \"Ultimate\"");
         }
     }
 }

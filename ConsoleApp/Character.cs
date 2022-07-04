@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    public class Character
+    public abstract class Character
     {
         public string Name { get; set; }
         public int Level { get; set; }
         public string Class { get; set; }
 
         public Character(string _Name, int _Level, string _Class) { }
+
+        public abstract void Attack();
 
         public virtual void Walk()
         {

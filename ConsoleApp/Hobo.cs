@@ -9,8 +9,10 @@ namespace ConsoleApp
     public class Hobo : Character
     {
         public string Class { get; set; }
-        public Hobo(string _Class) : base()
+        public Hobo(string _Name, int _Level, string _Class) : base(_Name, _Level, _Class)
         {
+            Name = _Name;
+            Level = _Level;
             Class = _Class;
         }
 
