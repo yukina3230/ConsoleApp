@@ -9,5 +9,10 @@ namespace ConsoleApp
     public static class Static
     {
         public static int MaxLevel = 15;
+
+        public static void PrintMaxLevel()
+        {
+            Console.WriteLine($"MaxLevel: {MaxLevel}");
+        }
     }
 }

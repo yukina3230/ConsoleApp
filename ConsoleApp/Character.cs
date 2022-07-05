@@ -12,7 +12,7 @@ namespace ConsoleApp
         public int Level { get; set; }
         public string Class { get; set; }
 
-        public Character(string _Name, int _Level, string _Class) { }
+        protected Character(string _Name, int _Level, string _Class) { }
 
         public abstract void Attack();
 

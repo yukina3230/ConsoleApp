@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    public interface IUseUltimate
+    interface ICanDoAlchemy
     {
-        public void UseUltimate();
+        void DoAlchemy();
     }
 }

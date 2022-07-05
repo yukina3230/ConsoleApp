@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    public class Wizard : Character, IUseUltimate
+    public class Wizard : Character, IUseUltimate, ICanDoAlchemy
     {
         public Wizard(string _Name, int _Level, string _Class) : base(_Name, _Level, _Class)
         {
@@ -20,9 +20,19 @@ namespace ConsoleApp
             Console.WriteLine("Wizard is spamming spell...");
         }
 
+        public override void Walk()
+        {
+            Console.WriteLine("Wizard walks too slow!");
+        }
+
         public void UseUltimate()
         {
             Console.WriteLine($"{Class} uses \"Lightning strike\"...");
+        }
+
+        public void DoAlchemy()
+        {
+            Console.WriteLine($"{Class} is making potion");
         }
     }
 }
