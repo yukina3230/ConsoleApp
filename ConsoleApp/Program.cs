@@ -22,8 +22,7 @@ foreach (var item in characterList)
     }
     if (item is ICanDoAlchemy)
     {
-        var i = item as ICanDoAlchemy;
-        i.DoAlchemy();
+       (item as ICanDoAlchemy).DoAlchemy();
     }
 }
 
