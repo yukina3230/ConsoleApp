@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp
+namespace RPG.Statics
 {
-    public static class Static
+    public static class GlobalProperty
     {
+        public static int PlayerIndex = 1;
         public static int MaxLevel = 15;
 
         public static void PrintMaxLevel()

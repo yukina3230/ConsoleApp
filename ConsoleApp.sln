@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{C57405A2-4F54-4567-9C6F-4ECAE04ED337}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPG", "ConsoleApp\RPG.csproj", "{C57405A2-4F54-4567-9C6F-4ECAE04ED337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiTap", "BaiTap\BaiTap.csproj", "{EC24A8FE-A44D-4EF3-A36B-24A8D176B431}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaiTap", "BaiTap\BaiTap.csproj", "{EC24A8FE-A44D-4EF3-A36B-24A8D176B431}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

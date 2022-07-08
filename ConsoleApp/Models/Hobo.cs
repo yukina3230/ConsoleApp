@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp
+namespace RPG.Models
 {
     public class Hobo : Character
     {
         public string Class { get; set; }
-        public Hobo(string _Name, int _Level, string _Class) : base(_Name, _Level, _Class)
+        public Hobo(string _Name, string _Class, string _Origin) : base(_Name, _Class, _Origin)
         {
             Name = _Name;
-            Level = _Level;
             Class = _Class;
+            Origin = _Origin;
         }
 
         public override void Attack()

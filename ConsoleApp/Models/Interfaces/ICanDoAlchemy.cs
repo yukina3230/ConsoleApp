@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp
+namespace RPG.Models.Interfaces
 {
-    public interface IUseUltimate
+    interface ICanDoAlchemy
     {
-        public void UseUltimate();
+        void DoAlchemy();
     }
 }
