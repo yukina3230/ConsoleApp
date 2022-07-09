@@ -7,9 +7,9 @@ using RPG.Models.Interfaces;
 
 namespace RPG.Models
 {
-    public class Wizard : Character, IUseUltimate, ICanDoAlchemy
+    public class Assassin : Character, IUseUltimate, INightVision
     {
-        public Wizard(string _Name, string _Class, string _Origin) : base(_Name, _Class, _Origin)
+        public Assassin(string _Name, string _Class, string _Origin) : base(_Name, _Class, _Origin)
         {
             Name = _Name;
             Class = _Class;
@@ -18,22 +18,22 @@ namespace RPG.Models
 
         public override void Attack()
         {
-            Console.WriteLine("Wizard is spamming spell...");
+            Console.WriteLine("Assassin is throwing daggers...");
         }
 
         public override void Walk()
         {
-            Console.WriteLine("Wizard walks too slow!");
+            Console.WriteLine("Wizard walks fast!");
         }
 
         public void UseUltimate()
         {
-            Console.WriteLine($"{Class} uses \"Lightning strike\"...");
+            Console.WriteLine($"{Class} uses \"Critikal strike\"...");
         }
 
-        public void DoAlchemy()
+        public void NightVision()
         {
-            Console.WriteLine($"{Class} is making potion");
+            Console.WriteLine($"{Class} actives \"Night Vision\"...");
         }
     }
 }

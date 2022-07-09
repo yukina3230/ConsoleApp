@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RPG.Models;
-using static RPG.Statics.GlobalProperty;
+using static RPG.Shared.Variables;
 
-namespace RPG.Servies.Starter
+namespace RPG.ViewModels.Servies
 {
     public class CharacterCreation
     {
@@ -24,7 +24,7 @@ namespace RPG.Servies.Starter
             _Name = Console.ReadLine();
             Console.Write("Choose a class: (1: Warrior, 2: Mage, 3: Assassin, 4: Hobo --- 0: Random)");
             _Class = Console.ReadLine();
-            playerDic.Add($"player{PlayerIndex}", new Wizard(_Name, _Class, _Origin));
+            playerDic.Add($"player{PlayerIndex}", new Assassin(_Name, _Class, _Origin));
 
             PlayerIndex++;
         }

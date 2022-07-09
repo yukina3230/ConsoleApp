@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RPG.Models.Interfaces
+namespace RPG.Shared
 {
-    interface ICanDoAlchemy
+    public static class Functions
     {
-        void DoAlchemy();
     }
 }

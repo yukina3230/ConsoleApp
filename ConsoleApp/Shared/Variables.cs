@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RPG.Statics
+namespace RPG.Shared
 {
-    public static class GlobalProperty
+    public static class Variables
     {
         public static int PlayerIndex = 1;
         public static int MaxLevel = 15;
