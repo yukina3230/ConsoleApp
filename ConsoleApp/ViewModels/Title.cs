@@ -8,8 +8,5 @@ namespace RPG.ViewModels
 {
     public class Title
     {
-        public void Run()
-        {
-        }
     }
 }

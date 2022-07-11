@@ -8,5 +8,9 @@ namespace RPG.Shared
 {
     public static class Functions
     {
+        public static string PrintLine(string _Line)
+        {
+            return _Line;
+        }
     }
 }

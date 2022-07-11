@@ -4,12 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terminal.Gui;
+using static RPG.Shared.Functions;
 
-namespace RPG.Views
-{
-    public class Prologue
-    {
-        void 
-        var titleText = new Label();
-    }
-}
+Application.Init();
+var view = Application.Top();

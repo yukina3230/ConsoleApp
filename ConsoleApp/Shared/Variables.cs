@@ -11,6 +11,7 @@ namespace RPG.Shared
         public static int PlayerIndex = 1;
         public static int MaxLevel = 15;
 
+
         public static void PrintMaxLevel()
         {
             Console.WriteLine($"MaxLevel: {MaxLevel}");

@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Components\Dialogs\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Terminal.Gui" Version="1.6.4" />
   </ItemGroup>
 
